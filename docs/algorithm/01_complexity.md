@@ -36,10 +36,58 @@ void fun(int n)
 ```
 答案：O(根号n)
 
-1） 设n为如下程序段处理的数据个数，求时间复杂度
+2） 设n为如下程序段处理的数据个数，求时间复杂度
 ```
 for(i=1;i<n;i=2*i)
     std::cout<<"i="<<i<<std::endl;
 ```
 答案：O（logn）
 
+3） 计算n！的递归函数如下，分析时间复杂度
+```
+int func(int n)
+{
+    if(n<=1)
+        return 1;   //①
+    else
+        return n*func(n-1);   //②
+}
+```
+答案：O（n）
+
+4） 分析以下程序时间复杂度
+```
+void fun(n)
+{
+   int i=1,k=0;
+   while(i<=n-1)
+   {
+       k+=10*i;
+       ++i;
+   }
+}
+```
+答案：O（n）
+
+5） 分析以下程序时间复杂度
+```
+void fun(int n)
+{
+    int i=1,k=0;
+    do
+    {
+    	k+=10*i;
+        ++i;
+    }while(i==n)
+}
+```
+答案：O（1）
+
+6） 分析以下程序时间复杂度
+```
+for (i=1; i<=n; i++)
+for (j=1; j<=i; j++)
+for (k=1; k<=j; k++)
+x++;
+```
+答案：O（1）
